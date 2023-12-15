@@ -239,7 +239,8 @@
       if ($(this).hasClass("active-tag")) {
         return;
       }
-      $(".active-tag").removeClass("active active-tag");
+      $(".active-tag").removeClass("active active-tag"); 
+      
       // on demande d'enlever la classe active active-tag de l'ancien mais on oublie une classe active pour l'ajout suivant. VOila pourquoi il n'y
       // avait plus le back dorée 
       $(this).addClass("active active-tag");
