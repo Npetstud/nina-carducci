@@ -150,7 +150,8 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
+          // ici, pour passer a l'image précédente on doit enlver 1 a index
+          index = i - 1 ;
         }
       });
       next =
@@ -189,7 +190,8 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
+          // ici pour pouvoir passer a l'image suivante on doit donner 1 à index
+          index = i + 1;
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
@@ -264,3 +266,7 @@
     }
   };
 })(jQuery);
+
+
+// Les deux erreurs ici fut strictement dans l'anotation du codage en effet pour celui des filtres on oublie une classe qui a pour effet de ne rien faire
+// dans le second on oublie d'ajouter ou soustraire  dans l'index (i) ce qui a pour effet que le code ne sache pas quoi faire également
