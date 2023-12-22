@@ -48,6 +48,7 @@
     tagsPosition: "bottom",
     navigation: true
   };
+  
   $.fn.mauGallery.listeners = function(options) {
     $(".gallery-item").on("click", function() {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
@@ -269,4 +270,4 @@
 
 
 // Les deux erreurs ici fut strictement dans l'anotation du codage en effet pour celui des filtres on oublie une classe qui a pour effet de ne rien faire
-// dans le second on oublie d'ajouter ou soustraire  dans l'index (i) ce qui a pour effet que le code ne sache pas quoi faire également
+// dans le second on oublie d'ajouter ou soustraire i.
