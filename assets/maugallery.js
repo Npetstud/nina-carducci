@@ -151,7 +151,6 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          // ici, pour passer a l'image précédente on doit enlver 1 a index
           index = i - 1 ;
         }
       });
@@ -191,7 +190,7 @@
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
-          // ici pour pouvoir passer a l'image suivante on doit donner 1 à index
+       
           index = i + 1;
         }
       });
@@ -244,8 +243,7 @@
       }
       $(".active-tag").removeClass("active active-tag"); 
       
-      // on demande d'enlever la classe active active-tag de l'ancien mais on oublie une classe active pour l'ajout suivant. VOila pourquoi il n'y
-      // avait plus le back dorée 
+
       $(this).addClass("active active-tag");
 
       var tag = $(this).data("images-toggle");
@@ -267,7 +265,3 @@
     }
   };
 })(jQuery);
-
-
-// Les deux erreurs ici fut strictement dans l'anotation du codage en effet pour celui des filtres on oublie une classe qui a pour effet de ne rien faire
-// dans le second on oublie d'ajouter ou soustraire i.
